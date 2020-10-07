@@ -9,6 +9,7 @@
   <style>
     body {
       text-align: center;
+      padding-top: 100px;
     }
 
     #container {
@@ -29,7 +30,7 @@
 
   const mode = "production";
   const embeddedTokens = new Swap.Widget( {
-    type: "embed",
+    type: "modal",
     buttonId: "container",
     mode: mode,
     config: config,
