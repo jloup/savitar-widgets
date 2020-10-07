@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <button id="container">launch</button>
+  <div id="container"></div>
 </body>
 <script>
   const configTokens = {
@@ -36,9 +36,9 @@
 
   const mode = "production";
   const embeddedTokens = new Swap.Widget( {
-    type: "modal",
+    type: "embed",
+    embedContainerId: "container",
     mode: mode,
-    buttonId: "container",
     config: configTokens,
   }).init();
 </script>

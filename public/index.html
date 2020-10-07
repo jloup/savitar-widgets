@@ -5,10 +5,9 @@
   <meta charset="utf-8">
 
   <title>Widget</title>
-  <script src="bundle.js"></script>
   <style>
     body {
-      align-content: center;
+      text-align: center;
       margin: 0 auto;
     }
 
@@ -24,22 +23,12 @@
 </head>
 
 <body>
-  <div id="container"></div>
+  <div id="container">
+    <ul>
+      <li><a href="embed.html">embed</a></li>
+      <li><a href="modal.html">modal</a></li>
+      <li><a href="starname">starname-embed</a></li>
+    </ul>
+  </div>
 </body>
-<script>
-  const configTokens = {
-    email_editable: true,
-    currency: "iov",
-    amount: 25,
-    amount_editable: true,
-  };
-
-  const mode = "production";
-  const embeddedTokens = new Swap.Widget( {
-    type: "embed",
-    embedContainerId: "container",
-    mode: mode,
-    config: configTokens,
-  }).init();
-</script>
 </html>
