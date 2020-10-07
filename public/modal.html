@@ -30,7 +30,6 @@
   const configTokens = {
     email_editable: true,
     currency: "iov",
-    buttonId: "container",
     amount: 25,
     amount_editable: true,
   };
@@ -39,6 +38,7 @@
   const embeddedTokens = new Swap.Widget( {
     type: "modal",
     mode: mode,
+    buttonId: "container",
     config: configTokens,
   }).init();
 </script>
