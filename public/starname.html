@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Widget</title>
+  <script src="bundle.js"></script>
+  <style>
+    body {
+      align-content: center;
+      margin: 0 auto;
+    }
+
+    body * {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    #container {
+      max-width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+</body>
+<script>
+  const config = {
+   payment_type: "iov",
+   email_editable: true,
+  };
+
+  const mode = "production";
+  const embeddedTokens = new Swap.Widget( {
+    type: "embed",
+    embedContainerId: "container",
+    mode: mode,
+    config: config,
+  }).init();
+</script>
+</html>
