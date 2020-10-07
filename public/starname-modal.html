@@ -8,7 +8,6 @@
   <script src="bundle.js"></script>
   <style>
     body {
-      padding-top: 100px;
       text-align: center;
     }
 
@@ -23,19 +22,17 @@
   <button id="container">Go</button>
 </body>
 <script>
-  const configTokens = {
-    email_editable: true,
-    currency: "iov",
-    amount: 25,
-    amount_editable: true,
+  const config = {
+   payment_type: "iov",
+   email_editable: true,
   };
 
   const mode = "production";
   const embeddedTokens = new Swap.Widget( {
-    type: "modal",
-    mode: mode,
+    type: "embed",
     buttonId: "container",
-    config: configTokens,
+    mode: mode,
+    config: config,
   }).init();
 </script>
 </html>
