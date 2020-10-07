@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Widget</title>
+  <script src="bundle.js"></script>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    #container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+</body>
+<script>
+  const config = {
+    email_editable: true,
+    currency: "btc",
+    amount: 100,
+    amount_editable: true,
+  };
+
+  const mode = "production";
+  const embeddedTokens = new Swap.Widget( {
+    type: "embed",
+    embedContainerId: "container",
+    mode: mode,
+    config: config,
+  }).init();
+</script>
+</html>
