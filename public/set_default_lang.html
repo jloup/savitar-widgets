@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Widget</title>
+  <script src="bundle.js"></script>
+  <style>
+    body {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    #container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="container-fr">Go FR</button>
+  <button id="container-en">Go EN</button>
+</body>
+<script>
+  const configTokens = {
+    email_editable: true,
+    currency: "iov",
+    amount: 25,
+    amount_editable: true,
+  };
+
+  const mode = "production";
+  const widgetFr = new Swap.Widget( {
+    type: "modal",
+    mode: mode,
+    buttonId: "container-fr",
+    config: configTokens,
+    lang: "fr",
+  }).init();
+
+  const widgetEn = new Swap.Widget( {
+    type: "modal",
+    mode: mode,
+    buttonId: "container-en",
+    config: configTokens,
+    lang: "en",
+  }).init();
+</script>
+</html>
